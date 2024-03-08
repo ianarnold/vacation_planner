@@ -1,0 +1,77 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="vacation_planner.MainWindow"
+        Title="Vacation Planner"
+        Width="800" Height="450">
+	<Grid Margin="20">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+
+		<!-- Title -->
+		<TextBlock Text="Informe informações da sua próxima viagem!" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+		<!-- Label and ComboBox -->
+		<StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Center" VerticalAlignment="Center">
+			<TextBlock Text="Destino:" Width="80" Margin="0,0,10,0"/>
+			<ComboBox Width="350" x:Name="cmbCapitaisEuropa">
+				<ComboBoxItem>Amsterdã</ComboBoxItem>
+				<ComboBoxItem>Atenas</ComboBoxItem>
+				<ComboBoxItem>Belgrado</ComboBoxItem>
+				<ComboBoxItem>Berlim</ComboBoxItem>
+				<ComboBoxItem>Berna</ComboBoxItem>
+				<ComboBoxItem>Bratislava</ComboBoxItem>
+				<ComboBoxItem>Bruxelas</ComboBoxItem>
+				<ComboBoxItem>Bucareste</ComboBoxItem>
+				<ComboBoxItem>Budapeste</ComboBoxItem>
+				<ComboBoxItem>Copenhague</ComboBoxItem>
+				<ComboBoxItem>Dublin</ComboBoxItem>
+				<ComboBoxItem>Estocolmo</ComboBoxItem>
+				<ComboBoxItem>Helsinque</ComboBoxItem>
+				<ComboBoxItem>Liubliana</ComboBoxItem>
+				<ComboBoxItem>Lisboa</ComboBoxItem>
+				<ComboBoxItem>Londres</ComboBoxItem>
+				<ComboBoxItem>Luxemburgo</ComboBoxItem>
+				<ComboBoxItem>Madri</ComboBoxItem>
+				<ComboBoxItem>Oslo</ComboBoxItem>
+				<ComboBoxItem>Paris</ComboBoxItem>
+				<ComboBoxItem>Praga</ComboBoxItem>
+				<ComboBoxItem>Reiquiavique</ComboBoxItem>
+				<ComboBoxItem>Riga</ComboBoxItem>
+				<ComboBoxItem>Roma</ComboBoxItem>
+				<ComboBoxItem>Sarajevo</ComboBoxItem>
+				<ComboBoxItem>Sofia</ComboBoxItem>
+				<ComboBoxItem>Tirana</ComboBoxItem>
+				<ComboBoxItem>Vaduz</ComboBoxItem>
+				<ComboBoxItem>Varsóvia</ComboBoxItem>
+				<ComboBoxItem>Viena</ComboBoxItem>
+				<ComboBoxItem>Vilnius</ComboBoxItem>
+				<ComboBoxItem>Zagreb</ComboBoxItem>
+			</ComboBox>
+		</StackPanel>
+
+		<!-- Label and DatePicker for Start Date -->
+		<StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Center"  VerticalAlignment="Center">
+			<TextBlock Text="Data início:" Width="80"  Margin="0,0,10,0"/>
+			<DatePicker Width="350" />
+		</StackPanel>
+
+		<!-- Label and DatePicker for End Date -->
+		<StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Center"  VerticalAlignment="Center">
+			<TextBlock Text="Data fim:" Width="80"  Margin="0,0,10,0"/>
+			<DatePicker Width="350" />
+		</StackPanel>
+
+		<StackPanel Grid.Row="4" Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Center"  VerticalAlignment="Center">
+			<Button Content="Salvar" Width="100" Margin="20,0,10,0" HorizontalAlignment="Center" Click="Button_Click"/>
+		</StackPanel>
+		
+	</Grid>
+</Window>
